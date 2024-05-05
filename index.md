@@ -1,5 +1,5 @@
-Here you can say lots of fun things about your site.
+👋 Welcome to my blog!
 
-Maybe say a some things about yourself.
+Hi, this is Charlie. I'm documenting my notes and some small writeups in this blog. I'm currently working on a research team at Xapien specialising in Language Model interpretability, performance and operations. 
 
-Or maybe what you plan to blog about.
+Sorry in advance for all of the grammar mistakes, hopefully it's all legible!
