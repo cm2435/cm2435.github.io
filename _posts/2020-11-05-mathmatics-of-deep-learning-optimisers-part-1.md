@@ -8,8 +8,7 @@ In this Section I will explain the need for optimizers arising from the computat
 
 Machine learning algorithms are, in essence, a trial and error process of approaching a realistic model of data to attain a goal. This is typically done by reducing the difference between the predicted output and the actual output. The modelling of the differential between these two factors can be displayed by a Cost function(C) or Loss function, which are typically convex functions and thus follow the following definition:
 
-![Function definition for a the Loss Function](../assets/maths-deep-learning-optimizers-part-1/definition_loss.png)
-
+![Function definition for the Loss Function](/assets/maths-deep-learning-optimizers-part-1/definition_loss.png)
 
 From this we can see that C approaches a local minimum in a vector space where it is minimised. Our strive for accurate models leads us to minimise the cost function by finding the optimum values for weightings, whilst still having the algorithm generalise well- lending itself to previously unseen useful predictions
 
