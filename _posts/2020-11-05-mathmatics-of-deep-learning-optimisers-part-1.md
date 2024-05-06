@@ -12,7 +12,7 @@ Machine learning algorithms are, in essence, a trial and error process of approa
 
 From this we can see that C approaches a local minimum in a vector space where it is minimised. Our strive for accurate models leads us to minimise the cost function by finding the optimum values for weightings, whilst still having the algorithm generalise well- lending itself to previously unseen useful predictions
 
-![Visualisation of the iterative process of machine learning.](../assets/maths-deep-learning-optimizers-part-1/ml_iteration.png)
+![Visualisation of the iterative process of machine learning.](/assets/maths-deep-learning-optimizers-part-1/ml_iteration.png)
 
 To achieve this goal, we iterate our learning model with different weights to trend towards minimising cost. This is gradient decent.
 
@@ -20,12 +20,12 @@ To achieve this goal, we iterate our learning model with different weights to tr
 
 Gradient descent is an iterative machine learning optimization to minimise the absolute value of the cost function. This will to maximise model accuracy.
 
-![A brief visualisation of a loss field](../assets/maths-deep-learning-optimizers-part-1/loss_field.png)
+![A brief visualisation of a loss field](/assets/maths-deep-learning-optimizers-part-1/loss_field.png)
 
 
 Gradient pertains to the direction of increase. As we want to find the minimum point in the "valley" we need to go in the opposite direction of the gradient. We update parameters in the negative gradient direction to minimize loss.
 
-![Gradient Descent Formula](../assets/maths-deep-learning-optimizers-part-1/update_field.png)
+![Gradient Descent Formula](/assets/maths-deep-learning-optimizers-part-1/update_field.png)
 
 θ is the weight parameter, η is the learning rate and ∇J(θ;x,y) is the gradient of weight parameter θ in cartesian spacing.
 
@@ -43,7 +43,7 @@ I will assume understanding of the fundamental concept of gradient decent, but a
 
 In batch gradient decent algorithms the whole dataset is used in the computation of the cost function gradient for every epoch, and then weights are updated.
 
-![Batch Gradient Descent Formula](../assets/maths-deep-learning-optimizers-part-1/batch_gradient_update.png)
+![Batch Gradient Descent Formula](/assets/maths-deep-learning-optimizers-part-1/batch_gradient_update.png)
 
 θ is the weight parameter, η is the learning rate and ∇θJ(θ) is the gradient of weight parameter θ in cartesian spacing.
 
@@ -62,7 +62,7 @@ This method can be considered as stochastic approximation of gradient descent op
 
 As the dataset is randomized and weights are updated for each single example, update of the weights and the cost function will involve stochastic noise, creating jagged function jumps as can be seen in the modelling later on.
 
-![Stochastic Gradient Descent Formula](../assets/maths-deep-learning-optimizers-part-1/sto_update_equation.png)
+![Stochastic Gradient Descent Formula](/assets/maths-deep-learning-optimizers-part-1/sto_update_equation.png)
 
 θ is again the weight parameter, η is the learning rate and ∇θJ(r) is the gradient of weight parameter θ in cartesian spacing where r is the spacing term for the weighting parameter with respect to the training example x and label y.
 
@@ -82,7 +82,7 @@ Mini batch gradient descent is widely used and converges faster with less fluctu
 
 As we take a batch with different samples, it reduces the noise which is variance of the weight updates and that helps to have a more stable converge faster.
 
-![Mini Batch Gradient Descent Formula](../assets/maths-deep-learning-optimizers-part-1/minibatch_update.png)
+![Mini Batch Gradient Descent Formula](/assets/maths-deep-learning-optimizers-part-1/minibatch_update.png)
 
 θ is again the weight parameter and η is the learning rate, ∇θJ(r) is the gradient of weight parameter θ in cartesian spacing where r is now the spacing term for the weighting parameter with respect to a batch size of size n iterated for the batches parameters and labels x(i) and y(i)
 
