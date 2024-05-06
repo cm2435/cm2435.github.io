@@ -8,6 +8,7 @@ Momentum helps accelerate Gradient Descent(GD) when we have surfaces that curve 
 
 Understanding Momentum, we begin with gradient descent-when optimizing a smooth function f, we make a small step in the gradient
 
+
 ![Gradient update](/assets/maths-deep-learning-optimisers-part-2/machine_learning_process.png)
 
 For a step-size small enough, gradient descent makes a monotonic improvement at every iteration. It always converges, albeit to a local minimum
@@ -49,7 +50,7 @@ and, as per convention, we will assume that the λ​i​​'s are sorted, from 
 If we perform a change of basis, x^{k} = Q^T(w^{k} — w^*)
 the iterations break apart, becoming:
 
-![Iterations Formula](/_assets/maths-deep-learning-optimisers-part-2/iterations_formula.png)
+![Iterations Formula](/assets/maths-deep-learning-optimisers-part-2/iterations_formula.png)
 
 ​​​​Moving back to our original space w, we can see that
 
