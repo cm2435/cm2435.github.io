@@ -1,5 +1,61 @@
 # The Mathematics of Deep-learning Optimisations- part 1
 
+Date: March 3rd, 2024 | Estimated Reading Time: 10 min | Author: Charlie Masters
+
+## Table of Contents
+
+<details>
+<summary>I. The Objective of Machine Learning Algorithms</summary>
+    <details>
+        <summary>1. Defining the Loss Function</summary>
+        <p>Explains the mathematical representation and importance of the loss function in ML algorithms.</p>
+    </details>
+    <details>
+        <summary>2. Visualizing the Iterative Process</summary>
+        <p>Describes how machine learning models iteratively adjust weights to minimize the loss function.</p>
+    </details>
+</details>
+
+<details>
+<summary>II. Gradient Descent</summary>
+    <details>
+        <summary>1. Concept and Formula</summary>
+        <p>Introduction to the concept of gradient descent and the fundamental formula used for parameter updates.</p>
+    </details>
+    <details>
+        <summary>2. Types of Gradient Descent</summary>
+        <p>Discusses the different types of gradient descent: Batch, Stochastic, and Mini Batch.</p>
+        <details>
+            <summary>a. Batch Gradient Descent</summary>
+            <p>Covers the mechanics, advantages, and disadvantages of using Batch Gradient Descent.</p>
+        </details>
+        <details>
+            <summary>b. Stochastic Gradient Descent</summary>
+            <p>Details on how Stochastic Gradient Descent works, including its benefits and limitations.</p>
+        </details>
+        <details>
+            <summary>c. Mini Batch Gradient Descent</summary>
+            <p>Explains what Mini Batch Gradient Descent is and its significance in deep learning training.</p>
+        </details>
+    </details>
+</details>
+
+<details>
+<summary>III. Role of an Optimizer</summary>
+    <p>Discusses the critical role optimizers play in enhancing the efficiency and effectiveness of training deep learning models.</p>
+</details>
+
+<details>
+<summary>IV. Types of Optimizers</summary>
+    <p>Provides an overview of various optimizers like Momentum, Nesterov Accelerated Momentum, ADAM, NADAM, ADAGRAD, and RMSProp.</p>
+</details>
+
+<details>
+<summary>V. Example: The Colorization Problem</summary>
+    <p>A practical example illustrating the application of discussed optimization techniques in a colorization task.</p>
+</details>
+
+
 Over the course of this post, I will start to explain the purpose of algorithmic machine learning and the roles played by gradient decent in achieving this. We will also cover the mathematics of optimisation hyperparameters including Nestarovian momentum, Adagrad, Adadelta, RMSProp, Adam and NAdam and SGD.
 
 In this Section I will explain the need for optimizers arising from the computational intensity of deep learning, and begin to go through some different types of optimizer that arise from models of gradient decent.
@@ -39,7 +95,7 @@ Gradient decent comes in many forms, each with their own benefits, drawbacks and
 
 I will assume understanding of the fundamental concept of gradient decent, but a coherent synopsis can be found [here](https://towardsdatascience.com/gradient-descent-algorithm-and-its-variants-10f652806a3).
 
-#### 1) Batch Gradient Descent
+#### 1 Batch Gradient Descent
 
 In batch gradient decent algorithms the whole dataset is used in the computation of the cost function gradient for every epoch, and then weights are updated.
 

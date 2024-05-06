@@ -1,5 +1,45 @@
 # The Mathematics of Deep Learning Optimizations- part 2
 
+Date: March 3rd, 2024 | Estimated Reading Time: 20 min | Author: Charlie Masters
+
+## Table of Contents
+
+<details>
+<summary>I. Momentum in Optimization</summary>
+    <details>
+        <summary>1. Introduction to Momentum</summary>
+        <p>Discusses the concept and initial need for using momentum in gradient descent optimization.</p>
+    </details>
+    <details>
+        <summary>2. Understanding Gradient Descent with Momentum</summary>
+        <p>Explains how momentum is integrated into the gradient descent process and its effects on optimization.</p>
+    </details>
+    <details>
+        <summary>3. Decomposing the Error</summary>
+        <p>Details the mathematical breakdown of errors in optimization and how momentum influences error reduction.</p>
+    </details>
+    <details>
+        <summary>4. Dynamics of Momentum</summary>
+        <p>Covers the detailed mechanics of how momentum functions during the gradient descent process.</p>
+    </details>
+</details>
+
+<details>
+<summary>II. Example: The Colorization Problem</summary>
+    <p>Provides a practical example applying momentum to the colorization of images, highlighting its effectiveness and the underlying mathematical principles.</p>
+</details>
+
+<details>
+<summary>III. Nesterov Momentum</summary>
+    <p>Delivers an in-depth exploration of Nesterov Accelerated Gradient, including its mathematical foundation and comparative benefits over standard momentum.</p>
+</details>
+
+<details>
+<summary>IV. References</summary>
+    <p>Lists the key references and resources utilized for the development of the content in this article.</p>
+</details>
+
+
 In this Section I will take a more in Depth of two of our optimizers that I laid out in my earlier writings, and begin to go thorough the mathematics of choosing a momentum, and the choosing of a Nestarov acceleration.
 
 ## Momentum
