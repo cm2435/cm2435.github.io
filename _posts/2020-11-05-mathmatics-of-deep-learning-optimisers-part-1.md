@@ -8,7 +8,7 @@ In this Section I will explain the need for optimizers arising from the computat
 
 Machine learning algorithms are, in essence, a trial and error process of approaching a realistic model of data to attain a goal. This is typically done by reducing the difference between the predicted output and the actual output. The modelling of the differential between these two factors can be displayed by a Cost function(C) or Loss function, which are typically convex functions and thus follow the following definition:
 
-![Function definition for a the Loss Function](../_assets/maths-deep-learning-optimisers-part-1/definition_loss.png)
+![Function definition for a the Loss Function](../_assets/maths-deep-learning-optimizers-part-1/definition_loss.png)
 
 From this we can see that C approaches a local minimum in a vector space where it is minimised. Our strive for accurate models leads us to minimise the cost function by finding the optimum values for weightings, whilst still having the algorithm generalise well- lending itself to previously unseen useful predictions
 
@@ -82,7 +82,7 @@ Mini batch gradient descent is widely used and converges faster with less fluctu
 
 As we take a batch with different samples, it reduces the noise which is variance of the weight updates and that helps to have a more stable converge faster.
 
-![Mini Batch Gradient Descent Formula](mini_batch_gradient_descent_formula.png)
+![Mini Batch Gradient Descent Formula](../_assets/maths-deep-learning-optimizers-part-1/minibatch_update.png)
 
 θ is again the weight parameter and η is the learning rate, ∇θJ(r) is the gradient of weight parameter θ in cartesian spacing where r is now the spacing term for the weighting parameter with respect to a batch size of size n iterated for the batches parameters and labels x(i) and y(i)
 
