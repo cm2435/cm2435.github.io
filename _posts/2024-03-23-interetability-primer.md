@@ -2,14 +2,49 @@
 
 (Dated: March 23, 2024)
 
-## BRIEF PREFACE
+
+# Towards Robust Reasoning in Language Models via Mechanistic Interpretability: A Research Proposal
+
+Date: May 6, 2024 | Estimated Reading Time: 30 min | Author: [Your Name]
+
+## Table of Contents
+
+<details>
+<summary>I. Language Models: Alignment, Reasoning and Interpretability</summary>
+</details>
+
+<details>
+<summary>II. Model Interpretability and Behavioural Interventions</summary>
+</details>
+
+<details>
+<summary>III. Proposal for New Research</summary>
+
+  <details>
+  <summary>A. Investigate the generality of mechanistic interpretability methods across LLM architectures</summary>
+  </details>
+
+  <details>
+  <summary>B. Discover Novel Mechanistic Interpretability Algorithms</summary>
+  </details>
+
+  <details>
+  <summary>C. Investigate interventions on LLM architectures using Mechanistic Interpretability</summary>
+  </details>
+
+</details>
+
+- IV. Conclusion
+- V. References
+
+## Brief preface
 This was a short paper I wrote as part of a PhD application to the Kings College Department of Safe and Trusted AI. It is a good primer into a range of topics including mechanistic interpretability, language model allignment, safety and some other areas of current research.
 
-## ABSTRACT
+## Abstract
 
 Large Language Models (LLMs) in recent years have become an industry backbone for a range of tasks. Despite the effectiveness of recently developed alignment and safety methods, our ability to construct safe and reliable models is limited by the low level of interpretability of LLMs and the lack of effective methods for controlling dangerous language model behaviour. In this proposal, we review the current state of LLM alignment and interpretability, discussing how new methods like mechanistic interpretability can be used to probe LLM understanding and behaviour. We also will discuss the role of these methods in designing new techniques to perform interventions on model behaviour to create safe and trustworthy systems. Finally, we propose possible avenues for research using mechanistic interpretability and representation-based methods to further research common interpretability structures across different model types, new novel interpretability methods and the role of interpretability analysis in designing rigorous AI systems.
 
-## I. LANGUAGE MODELS: ALIGNMENT, REASONING AND INTERPRETABILITY
+## I. Language models: allignment, reasoning and interpretability
 
 Over the past few years, Large Language Models (LLMs) have become increasingly capable across a wide range of tasks [[1](https://arxiv.org/abs/2204.02311)], [[2](https://arxiv.org/abs/2204.02311)]. As an emergent property of parameter scale [[3](https://arxiv.org/abs/2204.02311)] we have seen LLMs exhibit behaviour that resembles reasoning across a diverse range of topics and concepts.
 
@@ -19,7 +54,7 @@ In light of this widespread adoption in industry, alignment research has become 
 
 Despite promising initial results in the development of reliable agents that can reason effectively and safely, there has been notable recent work calling into question the true reasoning capacity of transformer-based LLMs [[15](https://doi.org/10.1145/3442188.3445922)]. By modelling compositional reasoning tasks as Directed Acyclic Graphs of logical reasoning steps, it has been shown [[16](https://arxiv.org/abs/2305.18654)] that transformers learn to emulate reasoning skills by performing linear subgraph matching with previously seen training DAGs rather than developing systematic problem-solving skills. Similarly, by defining reasoning tasks as formal grammars [[17](https://arxiv.org/abs/2207.02098)], prior work has concluded transformers, recursive neural networks (RNNs) and other common architectures unable to generalise on a range of context-free and context-sensitive tasks.
 
-## II. MODEL INTERPRETABILITY AND BEHAVIOURAL INTERVENTIONS
+## II. Model interpretability and behavioural interventions
 
 To better understand how these models store world knowledge and reason about tasks, there has been significant and diverse research to shed light on how LLMs represent information. It has been hypothesised [[18](https://arxiv.org/abs/2209.10652)] that there is a linear structure of the representations of many human interpretable topics in language models. This is well supported by previous works finding emergent structure in learned representations across a range of tasks and architectures. [[19](https://arxiv.org/abs/2023)], [[20](https://aclanthology.org/N13-1090)], [[21](https://arxiv.org/abs/2106.12423)]. 
 
@@ -35,7 +70,7 @@ In practice, both mechanistic and activation-baed interpretability methods have 
 
 Building on these insights, researchers have made good progress in both highlighting and mitigating potentially dangerous model behaviour. Recent research into safety [[30](https://arxiv.org/abs/2401.05566)] has shown that: (i) Safety alignment algorithms update model weights in a sparse manner [[31](https://arxiv.org/abs/2402.05162)], leading to only small regions of neurons which are critical to alignment and thus are susceptible to just fine-tuning the model to remove safety features (ii) malignant backdoors can be inserted into language models by poisoning pre-training data which cannot be removed by standard safety training techniques. Since this, other works [[32](https://arxiv.org/abs/2403.05030)] have been able to design methods to suppress harmful behaviour in models that weren't surfaced by adversarial testing or in preference data. In addition, a better insight into how models store latent information and how fine-tuning methods impact model behaviour would complement current research [[33](https://arxiv.org/abs/2305.20050)] [[34](https://arxiv.org/abs/2312.09390)] into being models capable at advanced reasoning. In the iterative cycle of identifying and patching possible attack vectors for LLMs, mechanistic interpretability has proved a useful tool for safety research.
 
-## III. PROPOSAL FOR NEW RESEARCH
+## III. Proposal for new research
 
 Mechanistic interpretability when combined with other methods has great capacity as a framework for both understanding and improving language models to make them more robust and safe. Prior work discussed has shown that although LLMs are by their nature difficult to interpret and hard to rigorously enforce to exhibit preferable behaviours. Despite this, interpretability has provided a diverse toolkit for better understanding LLMs and as a result designing novel algorithms for LLM alignment.
 
@@ -59,11 +94,11 @@ Mechanistic interpretability provides a strong framework for understanding the b
 
 To address these issues, an important unexplored component of these techniques is knowledge of how models store key concepts and world knowledge. Further studying of the role of sparse-coding methods to learn good activation guides for inference time interventions on LLMs could provide great utility to alignment research. Finally, as previously discussed, recent work has tried to probe the compositional reasoning capability of common LLM architectures by posing reasoning as formal structures such as DAGs or grammars. As interpretability methods improve with time, they can likely be used to glean information about how transformers and other foundational blocks of LLMs combine topics to create complex chains of reasoning. Further research into this topic could therefore enable the development of models with new superior reasoning capabilities.
 
-## IV. CONCLUSION
+## IV. Conclusion
 
 In this proposal, we have done a brief review of language models and how recent methods around alignment improved their abilities across a range of tasks. To analyse how these methods update the store of features and world knowledge, mechanistic interpretability has been a source of a range of useful techniques to reverse engineer the inner behaviour of LLMs, highlighting key areas of improvement of safety techniques and providing the theoretical basis for performing interventions to create safe and trustworthy foundation models. We have also highlighted some contemporary methods for areas of further research to generate new novel methods to do mechanistic interpretability, find general principles and scaling-laws for interpretability techniques across language model architectures and discover new methods to increase the capability of LLMs in reasoning, safety and allignment.
 
-## V. REFERENCES
+## V. References
 
 [1] TECHREPORT: A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, and I. Sutskever. [Language models are unsupervised multitask learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf). Technical report, OpenAI, 2019.
 
