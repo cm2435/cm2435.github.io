@@ -5,7 +5,7 @@
 
 # Towards Robust Reasoning in Language Models via Mechanistic Interpretability: A Research Proposal
 
-Date: May 6, 2024 | Estimated Reading Time: 30 min | Author: [Your Name]
+Date: March 3rd, 2024 | Estimated Reading Time: 30 min | Author: Charlie Masters
 
 ## Table of Contents
 
@@ -34,8 +34,13 @@ Date: May 6, 2024 | Estimated Reading Time: 30 min | Author: [Your Name]
 
 </details>
 
+<details>
 - IV. Conclusion
+</details>
+
+<details>
 - V. References
+</details>
 
 ## Brief preface
 This was a short paper I wrote as part of a PhD application to the Kings College Department of Safe and Trusted AI. It is a good primer into a range of topics including mechanistic interpretability, language model allignment, safety and some other areas of current research.
