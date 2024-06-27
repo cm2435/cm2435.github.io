@@ -4,21 +4,22 @@ Large Language Models are characterized by their ever-growing model complexity a
 
 Methods such as deep ensembles [Lakshminarayanan et al., 2017](https://arxiv.org/abs/1612.01474), sampling-based methods [Gal & Ghahramani, 2016](https://arxiv.org/abs/1506.02142), and more recently conformal prediction [Angelopoulos & Bates, 2022](https://arxiv.org/abs/2107.07511) have been used to great success for uncertainty quantification. However, these models are significantly more computationally expensive than inferencing their frequentist counterparts.
 
-These techniques treat the model parameters $\theta$ fitted to data $D$ as random variables that can be used to compute an approximation $q(\theta)$ to the true posterior distribution $p(\theta|D)$, which is intractable to compute directly as a result of the extreme dimensionality of language space. This approximation $q(\theta)$ is typically significantly more computationally expensive than computing a point estimate of the output.
+These techniques treat the model parameters \(\theta\) fitted to data \(D\) as random variables that can be used to compute an approximation \(q(\theta)\) to the true posterior distribution \(p(\theta|D)\), which is intractable to compute directly as a result of the extreme dimensionality of language space. This approximation \(q(\theta)\) is typically significantly more computationally expensive than computing a point estimate of the output.
 
-This can be illustrated by deep ensemble-based methods [Malinin & Gales, 2021](https://arxiv.org/abs/2002.07650), where the predictive posterior is found by taking the expectation over an ensemble of models $\{P(y|x; \theta^{(m)})\}_{m=1}^M$:
+This can be illustrated by deep ensemble-based methods [Malinin & Gales, 2021](https://arxiv.org/abs/2002.07650), where the predictive posterior is found by taking the expectation over an ensemble of models \(\{P(y|x; \theta^{(m)})\}_{m=1}^M\):
 
 $$
 P(y|x, D) \approx \frac{1}{M} \sum_{m=1}^M P(y|x, \theta^{(m)}), \quad \theta^{(m)} \sim q(\theta) \approx p(\theta|D)
 $$
 
-where each model $\theta^{(m)}$ maps between sequences of inputs $\{x_1, \dots, x_T\} = x \in \mathcal{X}$ and targets $\{y_1, \dots, y_L\} = y \in \mathcal{Y}$. To find the uncertainty in $y$, we then compute the entropy of this predictive posterior:
+where each model \(\theta^{(m)}\) maps between sequences of inputs \(\{x_1, \dots, x_T\} = x \in \mathcal{X}\) and targets \(\{y_1, \dots , y_L\} = y \in \mathcal{Y}\). To find the uncertainty in \(y\), we then compute the entropy of this predictive posterior:
 
 $$
 PE(x) = H(Y | x,D) = - \int p(y | x) \ln p(y | x,D) \, dy
 $$
 
-where $y$ is the realization of a sequence output given the proceeding sequence $x$. Quantifying the uncertainty in this Bayesian characterization, therefore, involves evaluating a computationally expensive integral $PE(x)$.
+where \(y\) is the realization of a sequence output given the preceding sequence \(x\). Quantifying the uncertainty in this Bayesian characterization, therefore, involves evaluating a computationally expensive integral \(PE(x)\).
+
 
 Deep ensembles pose a significant computational challenge for uncertainty quantification in large language models (LLMs) due to the memory constraints of even powerful hardware accelerators. This can be illustrated by considering the naive memory requirements to ensemble even relatively small models, such as Llama-3-8b [AI@Meta, 2024](https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md):
 
