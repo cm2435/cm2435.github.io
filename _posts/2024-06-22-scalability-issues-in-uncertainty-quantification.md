@@ -12,10 +12,10 @@ $$
 P(y|x, D) \approx \frac{1}{M} \sum_{m=1}^M P(y|x, \theta^{(m)}), \quad \theta^{(m)} \sim q(\theta) \approx p(\theta|D)
 $$
 
-where each model $\theta^{(m)}$ maps between sequences of inputs $\{x_1, \dots, x_T\} = x \in \mathcal{X}$ and targets $\{y_1, \dots , y_L\} = y \in \mathcal{Y}$. To find the uncertainty in $y$, we then compute the entropy of this predictive posterior:
+where each model $\theta^{(m)}$ maps between sequences of inputs $\{x_1, \dots, x_T\} = x \in \mathcal{X}$ and targets $\{y_1, \dots, y_L\} = y \in \mathcal{Y}$. To find the uncertainty in $y$, we then compute the entropy of this predictive posterior:
 
 $$
-PE(x) = H(Y | x,D) = - \int p(y | x) \ln p(y | x,D) dy
+PE(x) = H(Y | x,D) = - \int p(y | x) \ln p(y | x,D) \, dy
 $$
 
 where $y$ is the realization of a sequence output given the proceeding sequence $x$. Quantifying the uncertainty in this Bayesian characterization, therefore, involves evaluating a computationally expensive integral $PE(x)$.
