@@ -1,5 +1,5 @@
 title: "Machine Learning Blog"
-author: "Charlie masters"
+author: "Charlie Masters"
 description: "Some short posts on various topics in machine learning research, both to share my knowledge and to improve my understanding by penning my thoughts."
 
 # Email / Social media user names used by the minima theme:
@@ -25,9 +25,10 @@ theme: "minima"
 rss: rss
 
 kramdown:
+  math_engine: mathjax
   syntax_highlighter_opts:
     disable: true
-    
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
